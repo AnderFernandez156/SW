@@ -31,4 +31,4 @@
 			<response> Ninguna es correcta </response>
 		</incorrectResponses>
 	</assessmentItem>
-<assessmentItem author="asds345@ikasle.ehu.eus" subject="xml"><itemBody><p>prueba de xml</p></itemBody><correctResponse><response>se ha introducido</response></correctResponse><incorrectResponse><response>no  se ha introducido</response><response>tampoco</response><response>nose</response></incorrectResponse></assessmentItem><assessmentItem author="asds345@ikasle.ehu.eus" subject="funciona"><itemBody><p>nueva pregunta, para comprobar</p></itemBody><correctResponse><response>todo funciona correctamente</response></correctResponse><incorrectResponse><response>algo funciona mal</response><response>no se </response><response>ni idea</response></incorrectResponse></assessmentItem></assessmentItems>
+</assessmentItems>
