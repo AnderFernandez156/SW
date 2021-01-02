@@ -37,7 +37,7 @@
 			}
 			$email = $_POST['email'];
 			$nombreapellido = $_POST['nombreapellido'];
-			$sql = "insert into Usuarios(email,password,nombreapellido) values ('$email','$password','$nombreapellido)";
+			$sql = "insert into Usuarios(email,password,nombreapellido) values ('$email','$password','$nombreapellido')";
 			if (!mysqli_query($mysqli,$sql)){
 				echo "<h1>SE HA PRODUCIDO UN ERROR AL REGISTRARSE, PRUEBE MAS TARDE</h1>";
 			}else{
