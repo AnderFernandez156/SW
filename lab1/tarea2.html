@@ -1,0 +1,72 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Operaciones basicas</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="head">Operaciones basicas</h1>
+  </header>
+  <div id="content">
+    <p>Introduce dos numeros enteros:</p>
+    <input id="firstNumber" type=number>
+    <input id="secondNumber" type=number>
+    <p>Seleccione la operacion:</p>
+    <select id="selection" >
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <p>Indicar la soluci&oacute;n:</p>
+    <input id="result"  type=number>
+    <span id="correct">???</span>
+    <p>
+      <button  id="clear">clean</button>
+    </p>
+
+
+  </div>
+<script>
+$(document).ready(function() {
+  //clear function
+  $("#clear").click(function() {
+    $('#firstNumber').val('');
+    $('#secondNumber').val('');
+    $('#result').val('');
+  });
+  
+  //is correct
+  $('#result').on('input', function() {
+	function change(bool){
+		if(bool){$('#correct').html("CORRECT");}
+		else{$('#correct').html("FALSE");}
+	}
+	
+    first = parseInt($('#firstNumber').val(), 10);
+    second = parseInt($('#secondNumber').val(), 10);
+	result= parseInt($('#result').val(), 10);
+    operator = $('#selection').val();
+    switch (operator) {
+      case "+":
+        change(first + second == result); 
+        break;
+      case "-":
+        change(first - second == result);
+        break;
+      case "/":
+        change(first / second == result);
+        break;
+      case "*":
+       change(first * second == result);
+        break;
+      default:
+       change(first + second == result);
+        break;
+    }
+  });
+});
+</script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>Operaciones basicas</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="head">Operaciones basicas</h1>
+  </header>
+  <div id="content">
+    <p>Introduce dos numeros enteros:</p>
+    <input id="firstNumber" type=number>
+    <input id="secondNumber" type=number>
+    <p>Seleccione la operacion:</p>
+    <select id="selection" onchange="isCorrect()">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <p>Indicar la soluci&oacute;n:</p>
+    <input id="result" oninput="isCorrect()" type=number>
+    <label id="correct">???</label>
+    <p>
+      <button  id="clear" onclick="clean()">clean</button>
+    </p>
+
+
+  </div>
+
+
+<script>
+function isCorrect(){
+  var first = parseInt(document.getElementById("firstNumber").value);
+  var second = parseInt(document.getElementById("secondNumber").value);
+  var operator = document.getElementById("selection").value;
+  var result = parseInt(document.getElementById("result").value);
+  switch (operator) {
+    case "+":
+      change(first + second == result);
+      break;
+    case "-":
+      change(first - second == result);
+      break;
+    case "/":
+      change(first / second == result);
+      break;
+    case "*":
+      change(first * second == result);
+      break;
+    default:
+      change(first + second == result);
+      break;
+  }}
+
+
+function change(bool) {
+
+  if (bool) {
+    document.getElementById("correct").innerHTML = "CORRECTO";
+  } else {
+    document.getElementById("correct").innerHTML = "INCORRECTO";
+  }
+}
+
+function clean() {
+  document.getElementById("firstNumber").value = "";
+  document.getElementById("secondNumber").value = "";
+  document.getElementById("result").value = "";
+
+}
+</script>
+</body>
+</html>

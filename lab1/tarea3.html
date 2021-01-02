@@ -1,0 +1,46 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js"></script>
+
+  <title>Operaciones basicas</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="head">Operaciones basicas</h1>
+  </header>
+  <div id="content">
+    <p>Introduce una operacion:</p>
+    <input id="expresion">
+    
+    <p>Indicar la soluci&oacute;n:</p>
+    <input id="result"  type=number>
+    <span id="correct">???</span>
+    <p>
+      <button  id="clear">clean</button>
+    </p>
+  </div>
+<script>
+$(document).ready(function() {
+  //clear function
+  $('#clear').click(function() {
+    $('#expresion').val('');
+    $('#result').val('');
+  });
+  //is correct
+  $('#result').on('input', function() {
+	function change(bool){
+		if(bool){$('#correct').html("CORRECT");}
+		else{$('#correct').html("FALSE");}
+	}
+    
+	result= parseInt($('#result').val(), 10);
+	var variable = math.eval($('#expresion').val());
+	if(result == variable){change(true);}
+	else{change(false)};
+  });
+});
+</script>
+  </body>
+</html>
