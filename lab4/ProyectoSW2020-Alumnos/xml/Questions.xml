@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItems>
+	<assessmentItem subject="Web" author="jvadillo001@ikasle.ehu.eus">
+		<itemBody>
+			<p>Tag HTML para añadir un formulario</p>
+		</itemBody>
+		<correctResponse>
+			<response>
+				FORM
+			</response>
+		</correctResponse>
+		<incorrectResponses>
+			<response> OBJECT </response>
+			<response> TABLE </response>
+			<response> DIV </response>
+		</incorrectResponses>
+	</assessmentItem>
+		<assessmentItem subject="Internet" author="rarruabarrena001@ikasle.ehu.eus">
+		<itemBody>
+			<p>Este protocolo acabará funcionando
+			incluso entre dos latas unidas por un cordón</p>
+		</itemBody>
+		<correctResponse>
+			<response>
+				TCP/IP
+			</response>
+		</correctResponse>
+		<incorrectResponses>
+			<response> HTTP </response>
+			<response> SMTP </response>
+			<response> Ninguna es correcta </response>
+		</incorrectResponses>
+	</assessmentItem>
+<assessmentItem author="asds345@ikasle.ehu.eus" subject="xml"><itemBody><p>prueba de xml</p></itemBody><correctResponse><response>se ha introducido</response></correctResponse><incorrectResponse><response>no  se ha introducido</response><response>tampoco</response><response>nose</response></incorrectResponse></assessmentItem><assessmentItem author="asds345@ikasle.ehu.eus" subject="funciona"><itemBody><p>nueva pregunta, para comprobar</p></itemBody><correctResponse><response>todo funciona correctamente</response></correctResponse><incorrectResponse><response>algo funciona mal</response><response>no se </response><response>ni idea</response></incorrectResponse></assessmentItem></assessmentItems>
